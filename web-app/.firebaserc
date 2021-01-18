@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "watchpet-322",
+    "staging": "watchpet-322"
+  }
+}

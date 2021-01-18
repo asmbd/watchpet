@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:400,600&display=swap" rel="stylesheet">
+    <title>WATCHPET | MAKE YOUR DOG HAPPY WHEN YOU’RE NOT AROUND</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.12.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.12.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.12.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.12.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.12.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <div class='main'>
+      <div class="pet-card">
+        <img src='./assets/nunu.jpg' />
+        <div class='profile'>
+          <div class='name'>นูนู่ 🐶</div>
+          <div>
+            <span>อายุ: </span>
+            <span>2 เดือน</span>
+          </div>
+          <div>
+            <span>เพศ: </span>
+            <span>ชาย</span>
+          </div>
+        </div>
+      </div>
+      <div class='console'>
+        <div class='temperature' id='temperature'>
+          <div class='value'>
+            <div>
+              <span>อุณหภูมิ: </span>
+              <span id = 'temp'></span>
+              <span>°C</span>
+            </div>
+            <div id='temp-status'></div>
+          </div>
+          <div class="air">
+            <span>เครื่องปรับอากาศ</span>
+            <div class='air-controller'>
+              <span class="status">ปิด</span>
+              <label class="switch">
+                <input type="checkbox" id='air'>
+                <span class="slider round"></span>
+              </label>
+              <span class="status">เปิด</span>
+            </div>
+          </div>
+        </div>
+        <div class='feeding'>
+          <div>
+            <span>ตั้งเวลาเติมอาหาร</span>
+            <input type="time" id='timepicker'>
+          </div>
+          <div class='feed-button' id='feed'>เติมอาหารตอนนี้ 🍖</div>
+        </div>
+        <div class='playing'>
+          <span class='title'>เล่นกับสัตว์เลี้ยง</span>
+          <div class='feed-button' id='play'>กดเพื่อเล่น 🌈</div>
+      </div>
+      <h3 id="temp"></h3>
+    </div>
+
+    <script type="text/javascript" src='scripts.js'></script>
+  </body>
+</html>
